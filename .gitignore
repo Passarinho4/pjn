@@ -1,0 +1,7 @@
+.gradle
+.idea
+out
+pap.txt
+pap-indexed.txt
+pap-processed.txt
+pap-processed-stream.txt

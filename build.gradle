@@ -1,0 +1,29 @@
+group 'pjn'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes("Implementation-Title": project.name,
+                "Implementation-Version": version,
+                "Main-Class": "Main")
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.carrot2', name: 'morfologik-polish', version: '2.1.4'
+    compile group: 'org.carrot2', name: 'morfologik-stemming', version: '2.1.4'
+    compile group: 'org.carrot2', name: 'morfologik-parent', version: '2.1.4', ext: 'pom'
+
+    compile 'org.scala-lang:scala-library:2.12.4'
+}
